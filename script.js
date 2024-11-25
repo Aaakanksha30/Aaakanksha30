@@ -30,3 +30,13 @@ window.addEventListener("load", () => {
       "<"
     );
 });
+const button = document.getElementById("scrollButton");
+
+window.addEventListener("scroll", () => {
+    // Check if the user has scrolled to the bottom
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+});
